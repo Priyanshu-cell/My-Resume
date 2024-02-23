@@ -1,0 +1,14 @@
+#container {
+    width: 80%;
+    height: 300px;
+    border: 4px solid #000;
+    margin: 20px auto;
+    display: flex;
+  }
+  
+  .bar {
+    background-color: #3498db;
+    margin-right: 2px;
+    flex-grow: 1;
+  }
+  

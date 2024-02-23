@@ -2,4 +2,4 @@
 <br>
 this contains my personal details in the form of web.
 <br>
-Technology used: HTML, CSS
+Technology used: HTML, CSS and javaScript
