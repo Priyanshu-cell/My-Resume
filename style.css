@@ -3,25 +3,84 @@ body {
     font-family: sans-serif;
     font-size: 30px;
 }
+
+body::-webkit-scrollbar { 
+    display: none; 
+}
         /* body header */
 
 #body-header{
-    height: 76vh;
+    height: 65vh;
     opacity: 1.5;                  /* bulr effect on image*/
     background-image: url(image/background-image2.jpg);
     background-size: cover;
     background-position: center;
     background-attachment: fixed; /* scroll krne pr image parallel hogi*/
+    padding-top: 1.2rem;
 }
+
+
         /* horizontal list*/
+
+        .bars{
+            color: white;
+            margin: 0;
+            margin-right: 5%;
+            display: none;
+        }
+        
+        .bars i {
+            font-size: 2rem;
+        }
+        
+        .dropdown-list{
+            margin: 0;
+            display: none;
+            background-color: #828470;
+            box-shadow: 0px 4px 8px 1px #535547;
+        }
+        
+        .dropdown-list ul{
+            margin: 0.2rem 0.2rem;
+            text-align: left;
+            padding: 0px 0.8rem;
+        }
+        
+        .dropdown-menu:hover .dropdown-list{
+            display: block;
+            position: absolute;
+            right: 3%;
+        }
+        
+        .dropdown-list li{
+            margin: 0.4rem 0px;
+        }
+        
+        .no-list-style{
+            list-style: none;
+        }
+        
+        .no-list-style li {
+            font-weight: 100;
+            font-size: 0.9rem;
+        }
+        
+        .no-list-style li a{
+            list-style: none;
+            color: white;
+            text-decoration: none;
+        }
+        
+
+
 .horizontal-list{
-    list-style: none;
     padding-left: 0px;
+    margin: 0px;
 
 }
 .horizontal-list li{
     display: inline-block;
-    margin: 20px 8px 8px 0px;
+    margin: 0px 8px 8px 0px;
     
 }
 .horizontal-list li a{
@@ -39,35 +98,14 @@ body {
 .text-center{
     text-align: center;
 }
+.text-right{
+    text-align: right;
+}
 
-        /*            section           */
-
-section{
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-section:nth-child(2n){
-    background-color: white;    
-}
-section:nth-child(2n+1){
-    background-color: lightgray;
-}
-.section-heading{
-    width: auto;
-    padding: 20px 10px 10px;
-    font-weight: 400;
-}
-.section-heading span{
-    font-size: 40px;
-    color: #2857a4;
-    display: inline-block;
-    padding-top: 10px;
-    margin-right: 0.5rem;
-}
+     
 
         /* my name */
+
 #name-social-container{
     margin-top: 20vh;
 }
@@ -76,31 +114,70 @@ section:nth-child(2n+1){
     letter-spacing: 0.1rem;
     color: white;
     font-weight: 700;
-    margin-bottom: 0.5;
+    margin-bottom: 0.5rem;
 }
 
    /* gap b/w social icon*/
 
 .social-icon li a i{
-    padding: 8px;
+    padding: 10px;
     font-size: 1rem;
     border-radius: 50%;
 }
 .social-icon li a i:hover{
     box-shadow: 0px 0px 6px 4px rgba(230,196,196,0.3);
 }
+
+
+   /*            section           */
+
+
+   section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 20px;
+}
+
+section:nth-child(2n) {
+    background-color: #9e9b9b29;
+}
+
+section:nth-child(2n + 1) {
+    background-color: white;
+}
+
+.section-heading{
+    width: auto;
+    padding: 20px 10px 10px;
+    font-weight: 400;
+}
+
+.section-heading span{
+    font-size: 40px;
+    color: #2857a4;
+    display: inline-block;
+    padding-top: 10px;
+    margin-right: 0.5rem;
+}
+
+
+
             /* my image and about section*/
 
+        
 #about{
     height: auto;
     width: 100%;
-    font-size: medium;
+    position: relative;
+    margin-bottom: 30px;
 }
+
 #my-image{
     height: 12rem;
     width: 12rem;
     margin: auto;
-    margin-top: -16vh;          /* negative margine to image, so image goes upward direction */
+    margin-top: -17vh;          /* negative margine to image, so image goes upward direction */
 }
             /* image is very larege so we modify it according to parents div*/
 #my-image img{
@@ -110,13 +187,14 @@ section:nth-child(2n+1){
     box-shadow: 0px 0px 6px 4px rgba(230,196,196,0.3);
 }
 #my-text{
+
+    padding: 10px;
+    width: 70%;
     text-align: justify;
-    color: rgb(118, 113, 113);
-    font-size: larger;
-    margin: 20vh;
-    font-weight: bold;
-    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    margin-top: 5vh;
+    color: grey;
+    line-height: 28px;
+    font-size: 1.1rem;
+    margin: auto;
 }
 
 /*               skills section      */
@@ -224,7 +302,7 @@ section:nth-child(2n+1){
 }
 
 .timeline-box:nth-child(2n)::after {
-    left: -9%;
+    left: -9.7%;
 }
 
 .timeline-container {
@@ -501,6 +579,66 @@ button:focus {
 .mb-light-purple {
     background-color: #93738c;
 }
+
+/* screen ko dynamic krne k liye*/
+
+
+
+@media only screen and (max-width: 572px) {
+    
+    .timeline-box {
+        width: 100%;
+        left: 10% !important;
+    }
+
+    .bars {
+        display: block;
+    }
+    
+    
+    .nav-menu {
+        display: none;
+    } 
+}
+
+@media only screen and (max-width: 768px) {
+
+
+    .timeline-box {
+        width: 90%;
+        left: 10% !important;
+    }
+
+    .timeline-box::after {
+        left: -9.3% !important;
+    }
+
+    #timeline-divider {
+        top: 10%;
+        left: 2.7%;
+    }
+
+    #contact-form {
+        margin-left: 0%;
+    }
+
+    #contact-container {
+        flex-wrap: wrap;
+    }
+
+    #my-details-container {
+        width: 80%;
+        margin: 10%;
+    }
+
+    #contact-form-container {
+        width: 80%;
+        margin: 10%;
+    }
+
+}
+
+
 
 
 
