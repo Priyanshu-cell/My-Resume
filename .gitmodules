@@ -1,3 +1,6 @@
 [submodule "bat-ball"]
     path = bat-ball
     url = https://github.com/Priyanshu-cell/My-Resume.git
+[submodule "bat-ball-game"]
+	path = bat-ball-game
+	url = https://github.com/Priyanshu-cell/bat-ball-game
