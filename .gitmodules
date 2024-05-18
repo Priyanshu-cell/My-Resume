@@ -4,3 +4,6 @@
 [submodule "bat-ball-game"]
 	path = bat-ball-game
 	url = https://github.com/Priyanshu-cell/bat-ball-game
+[submodule "todo-app"]
+	path = todo-app
+	url = https://github.com/Priyanshu-cell/todo-app.git
