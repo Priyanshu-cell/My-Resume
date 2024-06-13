@@ -107,8 +107,8 @@ window.addEventListener("scroll", checkScroll);
 // This event fills the progress bars if they are displayed on the screen when the page is loaded.
 //window.addEventListener("load", checkScroll);
 
-// jQuerry
+// jQuery
 
-$('a').on('click', function(){
-    alert("Link is clicked");
+$("a").on('click', function() {
+    alert(`Handler for ${$(this).attr('href')} called.`);
   });
