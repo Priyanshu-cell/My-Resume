@@ -53,7 +53,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
                         /*skill bar animation  */
 
 // handle scroll event
-var progressBars= document.querySelectorAll(".skills-progress > div");
+var progressBars = document.querySelectorAll(".skills-progress > div");
 var skillContainer = document.getElementById("skills-container");
 addEventListener("scroll", checkScroll);
 
@@ -109,6 +109,6 @@ window.addEventListener("scroll", checkScroll);
 
 // jQuery
 
-$("a").on('click', function() {
-    alert(`Handler for ${$(this).attr('href')} called.`);
-  });
+// $("a").on('click', function() {
+//     alert(`Handler for ${$(this).attr('href')} called.`);
+//   });
